@@ -1,0 +1,19 @@
+# Python 가상환경
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 실제 데이터 (대용량)
+data/
+
+# 모델 파일, 체크포인트 등
+*.pt
+*.pth
+*.h5
+*.ckpt
