@@ -38,11 +38,11 @@ function FeeCalculator() {
         font-stardust
       "
     >
-      <h3 className="text-sm font-bold tracking-wide text-slate-50">
+      <h3 className="text-base font-bold tracking-wide text-slate-50">
         주차 요금 계산기
       </h3>
 
-      <div className="grid gap-3 text-xs">
+      <div className="grid gap-3 text-sm">
         <div className="flex flex-col space-y-1">
           <label className="text-slate-200 font-normal">
             이용 시간 (시간 단위)
@@ -64,10 +64,10 @@ function FeeCalculator() {
 
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-slate-200 font-normal">
+            <p className="text-base text-slate-200 font-normal">
               학생, 교직원 할인
             </p>
-            <p className="text-[11px] text-slate-400 font-normal">
+            <p className="text-[12px] text-slate-400 font-normal">
               사용 시 기본 요금 50% 적용
             </p>
           </div>
@@ -93,7 +93,7 @@ function FeeCalculator() {
         </div>
 
         <div className="flex flex-col space-y-1">
-          <label className="text-slate-200 font-normal">
+          <label className="text-base text-slate-200 font-normal">
             할인 금액 (원)
           </label>
           <input
@@ -133,7 +133,7 @@ function FeeCalculator() {
         </div>
 
         <div className="flex justify-between">
-          <span className="text-slate-300 font-normal">
+          <span className="text-base text-slate-300 font-normal">
             할인 적용 후
           </span>
           <span className="font-extrabold text-base tabular-nums text-cyan-200">

@@ -13,10 +13,10 @@ function CongestionBars({ data, activeTab }) {
       "
     >
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-bold tracking-wide text-slate-50">
+        <h3 className="text-base font-bold tracking-wide text-slate-50">
           시간대별 혼잡도
         </h3>
-        <span className="text-[11px] font-normal text-slate-300">
+        <span className="text-[13px] font-normal text-slate-300">
           0% (여유) ~ 100% (매우 혼잡)
         </span>
       </div>
@@ -30,7 +30,7 @@ function CongestionBars({ data, activeTab }) {
           return (
             <div
               key={item.label}
-              className="flex items-center space-x-2 text-xs"
+              className="flex items-center space-x-2 text-base"
             >
               <div className="w-10 flex-shrink-0">
                 <span

@@ -21,7 +21,7 @@ function SummaryCards({ totalSpaces, availablePrediction, saturation }) {
             <Car className="w-5 h-5 text-slate-50" />
           </div>
           <div>
-            <p className="text-xs text-slate-300">총 주차 대수</p>
+            <p className="text-base text-slate-300">총 주차 대수</p>
             <p className="text-lg font-semibold text-slate-50">
               {totalSpaces.toLocaleString()}
               <span className="text-xs font-normal text-slate-300 ml-1">대</span>
@@ -30,7 +30,7 @@ function SummaryCards({ totalSpaces, availablePrediction, saturation }) {
         </div>
         <span
           className="
-            text-[11px] px-3 py-1 rounded-full
+            text-[14px] px-3 py-1 rounded-full
             bg-gradient-to-r from-indigo-400/30 to-cyan-400/30
             text-cyan-100 border border-cyan-300/40
           "
@@ -53,7 +53,7 @@ function SummaryCards({ totalSpaces, availablePrediction, saturation }) {
             <ParkingSquare className="w-5 h-5 text-emerald-300" />
           </div>
           <div>
-            <p className="text-xs text-slate-300">주차 가능 예측</p>
+            <p className="text-base text-slate-300">주차 가능 예측</p>
             <p className="text-lg font-semibold text-slate-50">
               {availablePrediction.toLocaleString()}
               <span className="text-xs font-normal text-slate-300 ml-1">대</span>
@@ -62,7 +62,7 @@ function SummaryCards({ totalSpaces, availablePrediction, saturation }) {
         </div>
         <span
           className="
-            text-[11px] px-3 py-1 rounded-full
+            text-[14px] px-3 py-1 rounded-full
             bg-emerald-400/25 text-emerald-50
             border border-emerald-300/50
           "
