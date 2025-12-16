@@ -244,8 +244,8 @@ function ParkingLayout({ sceneName }) {
                 }
                 className={
                   selectedBuilding === b.id
-                    ? "px-3 py-1 text-xs rounded-full bg-white text-slate-900"
-                    : "px-3 py-1 text-xs rounded-full bg-transparent text-slate-200 hover:bg-white/10"
+                    ? "px-3 py-1 text-base rounded-full bg-white text-slate-900"
+                    : "px-3 py-1 text-base rounded-full bg-transparent text-slate-200 hover:bg-white/10"
                 }
               >
                 {b.label}

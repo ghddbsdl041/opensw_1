@@ -14,7 +14,7 @@ function InfoTabs({ activeTab, onTabChange, hours = [8, 9, 13] }) {
         p-4 flex items-center justify-between
       "
     >
-      <h2 className="text-sm font-semibold text-slate-50">시간대 선택</h2>
+      <h2 className="text-base font-semibold text-slate-50">시간대 선택</h2>
       <div className="inline-flex rounded-full bg-white/10 p-1 space-x-1">
         {tabs.map((tab) => {
           const isActive = tab === activeTab;
@@ -24,7 +24,7 @@ function InfoTabs({ activeTab, onTabChange, hours = [8, 9, 13] }) {
               type="button"
               onClick={() => onTabChange(tab)}
               className={`
-                px-3 py-1 text-xs font-medium rounded-full transition
+                px-3 py-1 text-base font-bold rounded-full transition
                 ${
                   isActive
                     ? "bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500 text-white shadow-[0_0_16px_rgba(56,189,248,0.9)]"
