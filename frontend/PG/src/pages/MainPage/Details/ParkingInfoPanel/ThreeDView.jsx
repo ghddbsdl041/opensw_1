@@ -1,7 +1,7 @@
 // src/pages/MainPage/Details/ParkingInfoPanel/ThreeDView.jsx
 import React from "react";
 
-function ThreeDView() {
+export default function ThreeDView() {
   return (
     <div className="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 flex items-center justify-center">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl p-6 max-w-xl w-11/12">
@@ -29,6 +29,4 @@ function ThreeDView() {
       </div>
     </div>
   );
-}
-
-export default ThreeDView;
+};

@@ -221,63 +221,71 @@ function ParkingLayout({ sceneName }) {
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
       {/* Unity 3D 영역 */}
-      <section className="flex-1 basis-[70%]">
+      <section className="flex-1 basis-[60%]">
         <UnityViewer ref={unityRef} onUnityReady={handleUnityReady} />
       </section>
 
       {/* 정보 패널 영역 */}
-      <section className="basis-[30%] max-w-md p-4 flex flex-col space-y-4 bg-white/10 backdrop-blur-2xl border-l border-white/15 shadow-[0_0_40px_rgba(0,0,0,0.65)]">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-base text-slate-300">
-            건물 선택
-          </span>
-          <div className="inline-flex rounded-full bg-white/10 p-1 space-x-1">
-            {[
-              { id: "eng", label: "공학관" },
-              { id: "ilsong", label: "일송관" },
-            ].map((b) => (
-              <button
-                key={b.id}
-                type="button"
-                onClick={() =>
-                  handleSelectBuilding(b.id)
-                }
-                className={
-                  selectedBuilding === b.id
-                    ? "px-3 py-1 text-base rounded-full bg-white text-slate-900"
-                    : "px-3 py-1 text-base rounded-full bg-transparent text-slate-200 hover:bg-white/10"
-                }
-              >
-                {b.label}
-              </button>
-            ))}
+      <section
+        className="
+          basis-[40%] max-w-md
+          bg-white/10 backdrop-blur-2xl
+          border-l border-white/15
+          shadow-[0_0_40px_rgba(0,0,0,0.65)]
+          flex flex-col
+          h-full
+        "
+      >
+        {/* 🔹 스크롤 컨테이너 */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          
+          {/* 건물 선택 */}
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-base text-slate-300">건물 선택</span>
+            <div className="inline-flex rounded-full bg-white/10 p-1 space-x-1">
+              {[
+                { id: "eng", label: "공학관" },
+                { id: "ilsong", label: "일송관" },
+              ].map((b) => (
+                <button
+                  key={b.id}
+                  type="button"
+                  onClick={() => handleSelectBuilding(b.id)}
+                  className={
+                    selectedBuilding === b.id
+                      ? "px-3 py-1 text-base rounded-full bg-white text-slate-900"
+                      : "px-3 py-1 text-base rounded-full bg-transparent text-slate-200 hover:bg-white/10"
+                  }
+                >
+                  {b.label}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <InfoTabs
-          activeTab={activeTab}
-          onTabChange={setActiveTab}
-          hours={hours}
-        />
-
-        {summaryData && (
-          <SummaryCards
-            totalSpaces={summaryData.totalSpaces}
-            availablePrediction={
-              summaryData.availablePrediction
-            }
-            saturation={summaryData.saturation}
+          <InfoTabs
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            hours={hours}
           />
-        )}
 
-        <div className="flex-1 flex flex-col space-y-4 overflow-y-auto pb-2">
+          {summaryData && (
+            <SummaryCards
+              totalSpaces={summaryData.totalSpaces}
+              availablePrediction={summaryData.availablePrediction}
+              saturation={summaryData.saturation}
+            />
+          )}
+
           <CongestionBars
             data={congestionArray}
             activeTab={activeTab}
           />
+
           <FeeCalculator />
         </div>
       </section>
+
     </div>
   );
 }
